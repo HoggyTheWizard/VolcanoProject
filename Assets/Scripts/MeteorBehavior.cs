@@ -1,7 +1,7 @@
 using UnityEngine;
 public class MeteorBehavior : MonoBehaviour
 {
-    [SerializeField] float speed;
+    [SerializeField] public float speed;
     void Update()
     {
         transform.Translate(speed * Time.deltaTime * Vector3.down);
