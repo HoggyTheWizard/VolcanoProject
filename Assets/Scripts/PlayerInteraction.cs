@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
@@ -15,5 +16,10 @@ public class PlayerInteraction : MonoBehaviour
             transform.position += speed * Time.deltaTime * new Vector3(1f, 0f, 0f);
         }
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        Debug.Log($"Collided with {col.gameObject.name}"); 
     }
 }
